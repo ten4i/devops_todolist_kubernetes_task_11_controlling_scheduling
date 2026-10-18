@@ -1,5 +1,5 @@
-#!/bin/bashk
-kind create cluter -f cluster.yml
+#!/bin/bash
+kind create cluster --config cluster.yml
 kubectl taint nodes -l app=mysql app=mysql:NoSchedule
 
 kubectl apply -f .infrastructure/mysql/ns.yml
